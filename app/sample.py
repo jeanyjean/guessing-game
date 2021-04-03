@@ -23,16 +23,16 @@ def index():
         body += '<br>'
         body += 'Question: ' + question_text
         body += '<br> <br>'
-        body += 'Choose: <button> <a href="/A">A</a></button>' 
-        body += '<button> <a href="/B">B</a></button>'
-        body += '<button> <a href="/C">C</a></button>'
-        body += '<button> <a href="/D">D</a></button>'
+        body += 'Choose:  <a href="/A"><button> A </button></a>' 
+        body += '<a href="/B"><button> B </button></a>'
+        body += '<a href="/C"><button> C </button></a>'
+        body += '<a href="/D"><button> D </button></a>'
         if game['index'] == 4:
             col_game.update_one({'stage': 1}, {"$set": {"mode"  : 1}})
             col_game.update_one({'stage': 1}, {"$set": {"index" : 0}})
-            body += '<br>'
-            body += '<button> <a href="/gameplay"> Finish </a></button>'
-            body += '<button> <a href="/reset"> Reset </a></button>'
+            body += '<br> <br>'
+            body += '<a href="/gameplay"><button> Finish </button></a>'
+            body += '<a href="/reset"><button> Reset </button></a>'
     else:
         mydict = {
             "stage": 1, 
@@ -154,10 +154,10 @@ def gameplay():
     body += '<br>'
     body += 'Character(s) remaining: ' + char_remain_text
     body += '<br> <br>'
-    body += 'Choose: <button> <a href="/A">A</a></button>' 
-    body += '<button> <a href="/B">B</a></button>'
-    body += '<button> <a href="/C">C</a></button>'
-    body += '<button> <a href="/D">D</a></button>'
+    body += 'Choose:  <a href="/A"><button> A </button></a>' 
+    body += '<a href="/B"><button> B </button></a>'
+    body += '<a href="/C"><button> C </button></a>'
+    body += '<a href="/D"><button> D </button></a>'
     body += '<br> <br>'
     body += 'Fails: ' + str(game["fail"])
     return body
@@ -177,7 +177,7 @@ def gameover():
     body += '<br> <br> '
     body += '<b>Fails: </b>' + str(game['fail'])
     body += '<br> <br> '
-    body += '<button> <a href="/again">Play again!</a></button>'
+    body += '<a href="/again"><button> Play again! </button></a>'
     return body
 
 @application.route('/again')
