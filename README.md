@@ -1,5 +1,6 @@
 # Guessing-Game
 Guessing game web-application using Flask and MongoDB for Database Systems for Software and Knowledge Engineers.
+By Purich Trainorapong 6210545581
 
 ## Cloning and Installation
 * Install [Docker(with Docker Compose)](https://docs.docker.com/desktop/)
@@ -24,5 +25,3 @@ Guessing game web-application using Flask and MongoDB for Database Systems for S
     ```
     > docker-compose down -v
     ```
-
-Purich Trainorapong 6210545581
